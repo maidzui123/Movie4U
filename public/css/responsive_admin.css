@@ -1,0 +1,78 @@
+@media only screen and (min-width: 1500px) {
+    .side-nav {
+        width: 15%;
+    }
+
+    .main-body {
+        width: 85%;
+        margin-left: 15%;
+    }
+    .body-header {
+        margin-bottom: 60px;
+    }
+    .total-info {
+        height: 220px;
+    }
+    .dashboard-footer_outer {
+        margin-top: 60px;
+    }
+    .views-icon_outer img {
+        width: 110px;
+        height: 110px;
+    }
+
+    .order-icon_outer img {
+        width: 110px;
+        height: 110px;
+    }
+
+    .revenue-icon_outer img {
+        width: 110px;
+        height: 110px;
+    }
+
+    .views-info_title{
+        font-size: 20px;
+    }
+
+    .order-info_title{
+        font-size: 20px;
+    }
+
+    .revenue-info_title{
+        font-size: 20px;
+    }
+
+    .views-info_outer h6 {
+        font-size: 36px;
+    }
+
+    .order-info_outer h6 {
+        font-size: 36px
+    }
+
+    .revenue-info_outer h6 {
+        font-size: 36px;
+    }
+    .dashboard-profit_outer {
+        height: 500px;
+        padding: 30px 30px !important;
+    }
+    .dashboard-chart_profit {
+        height: 450px !important;
+    }
+    .dashboard-ordered_outer {
+        height: 500px;
+        padding: 30px 30px !important;
+
+    }
+    .movie-wrap {
+        height: 120px;
+    }
+    .movie-poster {
+        width: 30%;
+    }
+    .category_title {
+        width: 70px !important;
+    }
+}

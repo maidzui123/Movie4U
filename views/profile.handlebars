@@ -1,0 +1,72 @@
+<div class="d-flex justify-content-center align-items-center container vh-100">
+    <div class="d-flex flex-column align-items-center justify-content-around w-50 py-3 px-2">
+        <img id="profile_avatar" src="/images/UserImg/unknowUser.jpg" alt="user">
+        <div class="w-75 user_info_item">
+            <label for="full_name_profile" class="form-label">Full name:</label>
+            <div class="input-group">
+                <input type="text" class="form-control" id="full_name_profile" disabled>
+                <span class="input-group-text cursor-pointer"><i class="fa-solid fa-pencil"
+                        style="color: black;"></i></span>
+            </div>
+        </div>
+        <div class="w-75 user_info_item">
+            <label for="email" class="form-label">Email:</label>
+            <div class="input-group">
+                <input type="email" class="form-control" id="email" disabled>
+            </div>
+        </div>
+        <div class="w-75 user_info_item">
+            <label for="phone" class="form-label">Phone number:</label>
+            <div class="input-group">
+                <input type="tel" class="form-control" id="phone" placeholder="Phone number" disabled>
+                <span class="input-group-text cursor-pointer"><i class="fa-solid fa-pencil"
+                        style="color: black;"></i></span>
+            </div>
+        </div>
+        <div class="w-75 user_info_item">
+            <label for="address" class="form-label">Address:</label>
+            <div class="input-group">
+                <input type="text" class="form-control" id="address" placeholder="Address" disabled>
+                <span class="input-group-text cursor-pointer"><i class="fa-solid fa-pencil"
+                        style="color: black;"></i></span>
+            </div>
+        </div>
+        <div class="w-75 user_info_item">
+            <label for="birthday" class="form-label">Birthday:</label>
+            <div class="input-group">
+                <input type="date" class="form-control" id="birthday">
+                <span class="input-group-text cursor-pointer"><i class="fa-solid fa-floppy-disk"
+                        style="color: black;"></i></span>
+            </div>
+        </div>
+        <button class="btn btn-danger mt-4 w-75" data-bs-toggle="modal" data-bs-target="#change_pass_modal">Change password</button>
+    </div>
+</div>
+<div id="change_pass_modal" class="modal fade" tabindex="-1" aria-modal="true" aria-hidden="true" role="dialog">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="text-black">Change Password</h3>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <label for="curr_pass" class="text-black">Current Password</label>
+                <div class="d-flex">
+                    <input id="curr_pass" class="input" type="password" required data-show="false">
+                    <button class="btn toggle_pass_forget" type="button"><i class="fa-regular fa-eye"></i></button>
+                </div>
+                <p id="curr_pass_error" class="error_mess"></p>
+                <label for="new_pass" class="text-black">New Password</label>
+                <div class="d-flex">
+                    <input id="new_pass" class="input" type="password" required data-show="false">
+                    <button class="btn toggle_pass_forget" type="button"><i class="fa-regular fa-eye"></i></button>
+                </div>
+                <p id="new_pass_error" class="error_mess"></p>
+                <label for="confirm_new_pass" class="text-black">Confirm New Password</label>
+                <input id="confirm_new_pass" class="input" type="password" required>
+                <p id="new_pass_confirm_error" class="error_mess"></p>
+                <button id="change_pass_btn" class="btn btn-danger w-100">Save</button>
+            </div>
+        </div>
+    </div>
+</div>

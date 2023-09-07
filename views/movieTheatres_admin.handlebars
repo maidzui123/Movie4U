@@ -1,0 +1,155 @@
+<div class="main-body">
+    <div class="body-header">
+        <h4>Theatre List </h4>
+        <div class="content_btn">
+            <button type="button" class="btn btn-success " data-bs-toggle="modal"
+                data-bs-target="#theatres_add-modal">Add</button>
+            <button id="btn_delete-theatre" type="submit" class="btn btn-danger ">Delete Selected</button>
+        </div>
+    </div>
+    <table id="table_theatres" class="table">
+        <thead class="content_title">
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Theatre Name</th>
+                <th scope="col">Image</th>
+                <th scope="col">Address</th>
+                <th scope="col">Delete</th>
+                <th scope="col">Modify</th>
+            </tr>
+        </thead>
+        <tbody id="list_theatres" class="content_list">
+
+        </tbody>
+    </table>
+    <div class="modal fade" id="theatres_add-modal" tabindex="-1" aria-labelledby="theatres_add-label"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content add_modal">
+                <form id="form_add-theatres" enctype="multipart/form-data">
+                    <div class="modal-header">
+                        <h4 class="modal-title" id="theatres_add-label">Add Theatre</h4>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Theatre Name</p>
+                        <div class="input-group flex-nowrap">
+                            <input type="text" id="theatre_name" class="form-control" placeholder="Enter theatre name">
+                        </div>
+                        <p>Theatre Address</p>
+                        <div class="input-group flex-nowrap">
+                            <input type="text" id="theatre_address" class="form-control"
+                                placeholder="Enter theatre address">
+                        </div>
+                        <p>Add Theatre Image</p>
+                        <div class="mb-3 add_image-outer">
+                            <input class="form-control" type="file" id="theatre_img">
+                        </div>
+                        <p>Add Theatre Telephone</p>
+                        <div class="input-group flex-nowrap">
+                            <input type="tel" id="theatre_tel" class="form-control">
+                        </div>
+                        <div class="mb-3 add_image-outer">
+                            <p>Add Theatre Description</p>
+                            <div class="input-group flex-nowrap">
+                                <textarea class="form-control" id="theatre_description" rows="3"
+                                    placeholder="Enter movie description"></textarea>
+                            </div>
+                        </div>
+                        <div class="theatres_room-outer">
+                            <div class="theatres_room ">
+                                <p>2D/3D</p>
+                                <div class="mb-3 add_image-outer">
+                                    <input type="number" id="2d3d_add" class="form-control" min="0" max="10">
+                                </div>
+                            </div>
+                            <div class="theatres_room ">
+                                <p>IMAX</p>
+                                <div class="mb-3 add_image-outer">
+                                    <input type="number" id="imax_add" class="form-control" min="0" max="10">
+                                </div>
+                            </div>
+                            <div class="theatres_room ">
+                                <p>4DX</p>
+                                <div class="mb-3 add_image-outer">
+                                    <input type="number" id="4dx_add" class="form-control" min="0" max="10">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="submit" id="btn_add-theatre" class="btn btn-primary" data-bs-dismiss="modal">Add
+                            Theatre</button>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="theatres_edit-modal" tabindex="-1" aria-labelledby="theatres_edit-label"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content add_modal">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="theatres_edit-label"></h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <form id="form_edit-theatres" enctype="multipart/form-data">
+                    <div class="modal-body">
+                        <p>Theatre Name</p>
+                        <div class="input-group flex-nowrap">
+                            <input type="text" id="theatre_name-edit" class="form-control"
+                                placeholder="Enter theatre name">
+                        </div>
+                        <p>Theatre Address</p>
+                        <div class="input-group flex-nowrap">
+                            <input type="text" id="theatre_address-edit" class="form-control"
+                                placeholder="Enter theatre address">
+                        </div>
+                        <div class="mb-3 add_image-outer">
+                            <p>Edit Theatre Image</p>
+                            <input class="form-control" type="file" id="theatre_img-edit">
+                        </div>
+                        <p>Edit Theatre Telephone</p>
+                        <div class="input-group flex-nowrap">
+                            <input type="tel" id="theatre_tel-edit" class="form-control">
+                        </div>
+                        <div class="mb-3 add_image-outer">
+                            <p>Edit Theatre Description</p>
+                            <div class="input-group flex-nowrap">
+                                <textarea class="form-control" id="theatre_description-edit" rows="3"
+                                    placeholder="Enter movie description"></textarea>
+                            </div>
+                        </div>
+                        <div class="theatres_room-outer">
+                            <div class="theatres_room ">
+                                <p>2D/3D</p>
+                                <div class="mb-3 add_image-outer">
+                                    <input type="number" id="2d3d_edit" class="form-control" disabled>
+                                </div>
+                            </div>
+                            <div class="theatres_room ">
+                                <p>IMAX</p>
+                                <div class="mb-3 add_image-outer">
+                                    <input type="number" id="imax_edit" class="form-control" disabled>
+                                </div>
+                            </div>
+                            <div class="theatres_room ">
+                                <p>4DX</p>
+                                <div class="mb-3 add_image-outer">
+                                    <input type="number" id="4dx_edit" class="form-control" disabled>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="submit" id="btn_edit-theatre" class="btn btn-primary" data-bs-dismiss="modal">Edit
+                            Theatre</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

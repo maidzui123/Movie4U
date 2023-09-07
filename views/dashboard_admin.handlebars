@@ -1,0 +1,77 @@
+<div class="main-body">
+    <div class="body-header">
+        <h4 id="dashboard_title"></h4>
+        <ul class="dashboard-date_opt">
+            <li id="today" onclick="todayClick()">Today</li>
+            <li id="week" onclick="weekClick()">Week</li>
+            <li id="month" onclick="monthClick()">Month</li>
+            <li id="year" onclick="yearClick()">Year</li>
+        </ul>
+    </div>
+    <div class="container dashboard-total">
+        <div class="row align-items-start">
+            <div class="col total-info total-views">
+                <div class="views-icon_outer">
+                    <img src="/images/Admin/total_views_icon.png" alt="">
+                </div>
+                <div class="views-info_outer">
+                    <p class="views-info_title">Total Views</p>
+                    <h6 id="views-info_value"></h6>
+                </div>
+            </div>
+            <div class="col total-info total-order">
+                <div class="order-icon_outer">
+                    <img src="/images/Admin/total_order_icon.png" alt="">
+                </div>
+                <div class="order-info_outer">
+                    <p class="order-info_title">Total Tickets</p>
+                    <h6 id="order-info_value">12.000</h6>
+                </div>
+            </div>
+            <div class="col total-info total-revenue">
+                <div class="revenue-icon_outer">
+                    <img src="/images/Admin/total_revenue_icon.png" alt="">
+                </div>
+                <div class="revenue-info_outer">
+                    <p class="revenue-info_title">Total Revenue</p>
+                    <h6 id="revenue-info_value">78,336$</h6>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container dashboard-footer_outer">
+        <div class="row dashboard-footer">
+            <div class="col-8 dashboard-footer dashboard-chart_outer">
+                <div class="dashboard-profit_outer">
+                    <div class="dashboard-footer_title profit-title">
+                        <i class="fa-regular fa-circle"></i>
+                        <h6>Profit</h6>
+                    </div>
+                    <canvas id="dashboard-chart" class="dashboard-chart_profit">
+                    </canvas>
+                </div>
+            </div>
+            <div class="col-4 dashboard-footer dashboard-most_outer">
+                <div class="dashboard-ordered_outer">
+                    <div class="dashboard-footer_title dashboard-most-outer">
+                        <div class="most-title">
+                            <i class="fa-regular fa-circle"></i>
+                            <h6>Most popular movie</h6>
+                        </div>
+                        {{#each most_popular}}
+                        <div class="list-popular" data-movie="{{this.name}}">
+                            <div class="movie-wrap">
+                                <img class="movie-poster" src="{{this.src}}" alt="">
+                                <div class="movie-info">
+                                    <p class="movie-name">{{this.name}}</p>
+                                    <p class="movie-duration">{{this.duration}}</p>
+                                </div>
+                            </div>
+                        </div>
+                        {{/each}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

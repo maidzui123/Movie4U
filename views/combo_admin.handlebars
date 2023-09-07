@@ -1,0 +1,130 @@
+<div class="main-body">
+    <div class="body-header">
+        <h4>Food & Drink Combo</h4>
+        <div class="content_btn">
+            <button type="button" class="btn btn-success " data-bs-toggle="modal"
+                data-bs-target="#combo_add-modal">Add</button>
+            <button id="btn_delete-combo" type="submit" class="btn btn-danger ">Delete Selected</button>
+        </div>
+    </div>
+    <table id="table_combo" class="table">
+        <thead class="content_title">
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Combo Name</th>
+                <th scope="col">Image</th>
+                <th scope="col">Price</th>
+                <th scope="col">Delete</th>
+                <th scope="col">Modify</th>
+            </tr>
+        </thead>
+        <tbody id="list_combo" class="content_list">
+        </tbody>
+    </table>
+    <div class="modal fade" id="combo_add-modal" tabindex="-1" aria-labelledby="combo_add-label" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content add_modal">
+                <form id="form_add-combo" enctype="multipart/form-data">
+                    <div class="modal-header">
+                        <h4 class="modal-title" id="combo_add-label">Add Food & Drink Combo</h4>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Combo Name</p>
+                        <div class="input-group flex-nowrap">
+                            <input type="text" id="combo_name" class="form-control" placeholder="Enter combo name">
+                        </div>
+                        <p>Add Combo Image</p>
+                        <div class="mb-3 add_image-outer">
+                            <input class="form-control" type="file" id="combo_img">
+                        </div>
+                        <p>Combo Description</p>
+                        <div class="input-group flex-nowrap">
+                            <textarea class="form-control" id="combo_description" rows="3"
+                                placeholder="Enter combo description"></textarea>
+                        </div>
+                        <div class="combo_amount-outer">
+                            <div class="combo_amount-large1">
+                                <p>Popcorns</p>
+                                <div class="input-group flex-nowrap">
+                                    <input type="number" id="popcorn_amount" class="form-control" min="0" max="100">
+                                </div>
+                            </div>
+                            <div class="combo_amount-large2">
+                                <p>Drinks</p>
+                                <div class="input-group flex-nowrap">
+                                    <input type="number" id="drink_amount" class="form-control" min="0" max="100">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="combo_price-outer">
+                            <p>Price</p>
+                            <div class="input-group flex-nowrap">
+                                <input type="number" id="combo_price" class="form-control" min="0">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="submit" id="btn_add-combo" class="btn btn-primary" data-bs-dismiss="modal">Add
+                            Combo</button>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="combo_edit-modal" tabindex="-1" aria-labelledby="combo_edit-label" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content add_modal">
+                <form id="form_edit-combo" enctype="multipart/form-data">
+                    <div class="modal-header">
+                        <h4 class="modal-title" id="combo_edit-label">Edit Food & Drink Combo</h4>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Combo Name</p>
+                        <div class="input-group flex-nowrap">
+                            <input type="text" id="combo_name-edit" class="form-control" placeholder="Enter combo name">
+                        </div>
+                        <p>Edit Combo Image</p>
+                        <div class="mb-3 add_image-outer">
+                            <input class="form-control" type="file" id="combo_img-edit">
+                        </div>
+                        <p>Combo Description</p>
+                        <div class="input-group flex-nowrap">
+                            <textarea class="form-control" id="combo_description-edit" rows="3"
+                                placeholder="Enter combo description"></textarea>
+                        </div>
+                        <div class="combo_amount-outer">
+                            <div class="combo_amount-large1">
+                                <p>Popcorns</p>
+                                <div class="input-group flex-nowrap">
+                                    <input type="number" id="popcorn_amount-edit" class="form-control" min="0" max="100">
+                                </div>
+                            </div>
+                            <div class="combo_amount-large2">
+                                <p>Drinks</p>
+                                <div class="input-group flex-nowrap">
+                                    <input type="number" id="drink_amount-edit" class="form-control" min="0" max="100">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="combo_price-outer">
+                            <p>Price</p>
+                            <div class="input-group flex-nowrap">
+                                <input type="number" id="combo_price-edit" class="form-control" min="0">
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="submit" id="btn_edit-combo" class="btn btn-primary" data-bs-dismiss="modal">Edit
+                            Combo</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
